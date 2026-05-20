@@ -19,3 +19,15 @@ Upload any image and get instant Real/Fake classification with confidence score.
 - Secure API key management with `.env`
 
 ## 📁 Project Structure
+
+fake-image-detection/
+├── backend/
+│   ├── app.py        # Flask API
+│   ├── config.py     # Configuration
+│   └── train.py      # Model training
+├── templates/
+│   └── index.html    # Frontend UI
+├── static/
+│   ├── style.css
+│   └── script.js
+└── requirements.txt
