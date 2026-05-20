@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepFake Image Detection</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Image Detection AI</h1>
+            <p>Upload an image to verify if it's Real or Fake</p>
+        </header>
+
+        <main>
+            <div class="upload-container" id="drop-zone">
+                <input type="file" id="file-input" accept="image/*" hidden>
+                <div class="upload-content">
+                    <div class="icon-cloud">☁️</div>
+                    <p>Drag & Drop or <span class="browse-btn" onclick="document.getElementById('file-input').click()">Browse</span></p>
+                    <p class="file-info" id="file-name"></p>
+                </div>
+                <div class="preview-container" id="preview-container" style="display: none;">
+                    <img id="image-preview" src="" alt="Image Preview">
+                    <button class="remove-btn" onclick="removeImage()">×</button>
+                </div>
+            </div>
+
+            <button id="analyze-btn" class="primary-btn" disabled>Analyze Image</button>
+
+            <div id="result-container" class="result-container" style="display: none;">
+                <div class="result-card">
+                    <h2 id="result-label">Real</h2>
+                    <div class="confidence-bar-bg">
+                        <div id="confidence-bar" class="confidence-bar-fill"></div>
+                    </div>
+                    <p>Confidence: <span id="confidence-score">0%</span></p>
+                </div>
+            </div>
+            
+            <div id="loading" class="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Analyzing...</p>
+            </div>
+            
+            <div id="error-message" class="error-message" style="display: none;"></div>
+        </main>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
