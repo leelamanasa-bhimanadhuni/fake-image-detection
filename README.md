@@ -1,13 +1,11 @@
-**🔍 FIDAC — Fake Image Detection using AI/ML**
+## 🔍 FIDAC — Fake Image Detection using AI/ML
 
 A deep learning-based web application that detects fake/manipulated images using DenseNet121 transfer learning. Built as a final-year capstone project, achieving 95–97% accuracy on a dataset of 140,000+ images.
 
-**📌 Project Overview**
+## 📌 Project Overview
 
 FIDAC (Fake Image Detection using AI/ML) addresses the growing problem of deepfakes and manipulated media. The model classifies images as real or fake using transfer learning on DenseNet121, deployed via a Flask web interface.
 
-## 🚀 Live Demo
-Upload any image and get instant Real/Fake classification with confidence score.
 
 ## 🛠️ Tech Stack
 - **Backend:** Python, Flask
